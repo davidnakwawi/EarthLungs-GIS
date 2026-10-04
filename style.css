@@ -676,10 +676,10 @@ a { color: inherit; }
 }
 
 @media (max-width: 680px) {
-  .container,
-  .narrow {
-    width: min(100% - 28px, 1120px);
+  .brand-name {
+    font-size: 17px !important;
   }
+}
 
   .nav-wrap {
     min-height: 64px;
@@ -750,4 +750,12 @@ a { color: inherit; }
   .footer-wrap div:last-child a:first-child {
     margin-left: 0;
   }
+}
+/* EarthLungs GIS brand name */
+.brand-name {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #349E40 !important;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
 }
