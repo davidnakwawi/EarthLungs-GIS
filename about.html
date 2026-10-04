@@ -10,12 +10,15 @@
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html"><span class="brand-mark">EL</span><span>EarthLungs GIS</span></a>
+      <a class="brand" href="index.html">
+        <img src="assets/earthlungs-logo.png" alt="EarthLungs Reforestation Foundation logo" class="brand-logo">
+        <span class="brand-name">EarthLungs GIS</span>
+      </a>
       <nav class="nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a class="active" href="about.html">About</a>
-        <a href="app.html">GIS App</a>
-        <a class="nav-cta" href="app.html">Open Platform</a>
+        <a href="app.html">GIS Application</a>
+        <a class="nav-cta" href="app.html">Open GIS Application</a>
       </nav>
     </div>
   </header>
@@ -23,9 +26,9 @@
   <main>
     <section class="page-hero">
       <div class="container narrow">
-        <p class="eyebrow">ABOUT</p>
-        <h1>EarthLungs GIS</h1>
-        <p>GIS, remote sensing and drone mapping for EarthLungs restoration sites.</p>
+        <p class="eyebrow">ABOUT EARTHLUNGS GIS</p>
+        <h1>Built around real site boundaries.</h1>
+        <p>GIS, remote sensing and drone mapping supporting EarthLungs restoration monitoring.</p>
       </div>
     </section>
 
@@ -37,25 +40,48 @@
           boundaries and running repeatable remote sensing analyses at selected sites.
         </p>
 
-        <h2>Current analytical scope</h2>
+        <h2>Our Mission</h2>
         <p>
-          The current production application covers NDVI, NDRE, NDVI + NDRE comparison,
-          temporal change, Dynamic World land-cover analysis, EVI and NDWI.
+          To restore and protect ecosystems, fostering biodiversity and sustainable livelihoods
+          through community-driven restoration and conservation efforts, ensuring a greener,
+          healthier planet for present and future generations.
         </p>
 
-        <h2>Data workflow</h2>
-        <div class="workflow">
-          <div><span>01</span><strong>Country</strong><small>Kenya, Tanzania or Mozambique</small></div>
-          <div><span>02</span><strong>Site</strong><small>Select an EarthLungs boundary</small></div>
-          <div><span>03</span><strong>Period</strong><small>Select exact analysis dates</small></div>
-          <div><span>04</span><strong>Run</strong><small>Generate the selected analysis</small></div>
+        <h2>Our Vision</h2>
+        <p>
+          To be a leader in transforming Africa into a green, sustainable, and climate-resilient continent.
+        </p>
+
+        <h2>Current analytical scope</h2>
+        <p>
+          The production application currently provides NDVI, NDRE, NDVI + NDRE Comparison,
+          Temporal Change, LULC, EVI and NDWI.
+        </p>
+
+        <h2>How to Use the Application</h2>
+        <div class="workflow workflow-steps">
+          <div><span>01</span><strong>Select Country</strong><small>Kenya, Tanzania or Mozambique</small></div>
+          <div><span>02</span><strong>Select Site</strong><small>Select an EarthLungs boundary</small></div>
+          <div><span>03</span><strong>Select Dates</strong><small>Choose exact start and end dates</small></div>
+          <div><span>04</span><strong>Run Analysis</strong><small>Generate the selected analysis</small></div>
+        </div>
+
+        <h2>Interpreting Results</h2>
+        <div class="interpret-grid">
+          <div><h3>NDVI</h3><p>Higher values generally indicate greener, denser vegetation. Use change analysis to compare the same site across periods.</p></div>
+          <div><h3>NDRE</h3><p>Provides a red-edge vegetation signal and is useful for evaluating vegetation response where canopy condition varies.</p></div>
+          <div><h3>EVI</h3><p>Provides an enhanced vegetation response using NIR, red and blue bands, especially useful where vegetation structure and background effects matter.</p></div>
+          <div><h3>NDWI</h3><p>Provides a water and vegetation-moisture signal derived from green and NIR bands.</p></div>
+          <div><h3>LULC</h3><p>Dynamic World classes are screened using the composite confidence threshold before class-area statistics and change mapping are reported.</p></div>
+          <div><h3>Temporal Change</h3><p>Compares baseline and current periods for NDVI and NDRE using absolute and percentage change.</p></div>
         </div>
 
         <h2>Technology</h2>
         <p>
-          The presentation website is hosted separately from the GIS analysis engine. The
-          website provides documentation and access to the application; the EarthLungs GIS
-          application performs the spatial analysis.
+          The presentation website is hosted separately from the GIS analysis engine. The website
+          provides documentation and access to the application; the EarthLungs GIS application
+          performs the spatial analysis using approved EarthLungs country site assets and
+          Sentinel-2 / Dynamic World datasets.
         </p>
 
         <div class="note-box">
@@ -68,8 +94,8 @@
 
   <footer class="site-footer">
     <div class="container footer-wrap">
-      <div><strong>EarthLungs GIS</strong><span>Spatial intelligence for restoration monitoring.</span></div>
-      <div><a href="index.html">Home</a><a href="app.html">GIS App</a></div>
+      <div><strong>EarthLungs Reforestation Foundation</strong><span>EarthLungs GIS • Spatial intelligence for restoration monitoring.</span></div>
+      <div><a href="index.html">Home</a><a href="app.html">GIS Application</a></div>
     </div>
   </footer>
 </body>
