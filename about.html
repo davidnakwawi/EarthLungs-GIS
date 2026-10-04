@@ -1,16 +1,14 @@
-<!DOCTYPE html>
+from pathlib import Path
+
+out = Path("/mnt/data/EarthLungs-GIS-about-clean.html")
+
+html = """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta
-    name="description"
-    content="About the EarthLungs Spatial Intelligence Platform."
-  >
-
+  <meta name="description" content="About the EarthLungs Spatial Intelligence Platform.">
   <title>About | EarthLungs GIS</title>
-
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -37,173 +35,178 @@
     </div>
   </header>
 
-
   <main>
 
     <section class="page-hero">
       <div class="container narrow">
-
-        <p class="eyebrow">
-          ABOUT EARTHLUNGS GIS
-        </p>
-
-        <h1>
-          EarthLungs Spatial Intelligence Platform
-        </h1>
-
+        <p class="eyebrow">ABOUT EARTHLUNGS GIS</p>
+        <h1>EarthLungs Spatial Intelligence Platform</h1>
         <p>
-          GIS, remote sensing and drone mapping supporting
-          EarthLungs restoration sites across Africa.
+          GIS, remote sensing and drone mapping supporting EarthLungs
+          restoration sites across Africa.
         </p>
-
       </div>
     </section>
 
-
     <section class="section section-light">
-
       <div class="container narrow content-copy">
 
         <h2>Purpose</h2>
-
         <p>
-          EarthLungs GIS provides a structured spatial environment
-          for viewing approved EarthLungs site boundaries and
-          running repeatable remote sensing analyses for selected
-          sites.
+          EarthLungs GIS provides a structured spatial environment for
+          viewing approved EarthLungs site boundaries and running
+          repeatable remote sensing analyses for selected sites.
         </p>
-
 
         <h2>Current Coverage</h2>
-
-        <p>
-          The current production platform is connected to
-          EarthLungs sites in:
-        </p>
-
+        <p>The current production platform is connected to EarthLungs sites in:</p>
         <ul>
           <li>Kenya</li>
           <li>Tanzania</li>
           <li>Mozambique</li>
         </ul>
 
-
         <h2>How the Platform Works</h2>
 
         <div class="workflow">
-
           <div>
             <span>01</span>
             <strong>Country</strong>
-            <small>
-              Select Kenya, Tanzania or Mozambique.
-            </small>
+            <small>Select Kenya, Tanzania or Mozambique.</small>
           </div>
-
           <div>
             <span>02</span>
             <strong>EarthLungs Site</strong>
-            <small>
-              Select the approved site boundary.
-            </small>
+            <small>Select the approved site boundary.</small>
           </div>
-
           <div>
             <span>03</span>
             <strong>Analysis</strong>
-            <small>
-              Select the required spatial analysis.
-            </small>
+            <small>Select the required spatial analysis.</small>
           </div>
-
           <div>
             <span>04</span>
             <strong>Date</strong>
-            <small>
-              Select the exact analysis dates.
-            </small>
+            <small>Select the exact analysis dates.</small>
           </div>
-
           <div>
             <span>05</span>
             <strong>Run</strong>
-            <small>
-              Generate the selected analysis.
-            </small>
+            <small>Generate the selected analysis.</small>
           </div>
-
         </div>
-
 
         <h2>Current Analysis Scope</h2>
 
         <h3>NDVI</h3>
-
         <p>
           Normalized Difference Vegetation Index for vegetation
           condition monitoring.
         </p>
 
-
         <h3>NDRE</h3>
-
         <p>
           Normalized Difference Red Edge for vegetation response
           using Sentinel-2 red-edge information.
         </p>
 
-
         <h3>NDVI + NDRE Comparison</h3>
-
         <p>
           Comparison of NDVI and NDRE for the selected EarthLungs
           site across analysis periods.
         </p>
 
-
         <h3>Temporal Change</h3>
-
         <p>
           Baseline versus current temporal change analysis for
           NDVI and NDRE.
         </p>
 
-
         <h3>LULC</h3>
-
         <p>
           Land-use and land-cover analysis using Google Dynamic
           World V1 with confidence screening.
         </p>
 
-
         <h3>EVI</h3>
-
         <p>
           Enhanced Vegetation Index for vegetation response.
         </p>
 
-
         <h3>NDWI</h3>
-
         <p>
           Normalized Difference Water Index for water and
           moisture-related surface response.
         </p>
 
+        <h2>Interpreting Results</h2>
+
+        <div class="interpret-grid">
+          <div>
+            <h3>NDVI</h3>
+            <p>
+              Higher values generally indicate greener, denser
+              vegetation. Use temporal change analysis to compare
+              the same site across periods.
+            </p>
+          </div>
+
+          <div>
+            <h3>NDRE</h3>
+            <p>
+              Provides a red-edge vegetation signal and supports
+              assessment of vegetation response where canopy
+              condition varies.
+            </p>
+          </div>
+
+          <div>
+            <h3>EVI</h3>
+            <p>
+              Provides an enhanced vegetation response using
+              near-infrared, red and blue bands.
+            </p>
+          </div>
+
+          <div>
+            <h3>NDWI</h3>
+            <p>
+              Provides a water and vegetation-moisture signal
+              derived from green and near-infrared bands.
+            </p>
+          </div>
+
+          <div>
+            <h3>LULC</h3>
+            <p>
+              Dynamic World classes are screened using the
+              production confidence threshold before class-area
+              statistics and change mapping are reported.
+            </p>
+          </div>
+
+          <div>
+            <h3>Temporal Change</h3>
+            <p>
+              Compares baseline and current periods for NDVI and
+              NDRE using absolute and percentage change.
+            </p>
+          </div>
+        </div>
 
         <h2>Technology</h2>
 
         <p>
-          The EarthLungs GIS Application uses Google Earth Engine
-          for spatial analysis and Sentinel-2 surface reflectance
-          data for the vegetation-index workflows.
+          The presentation website is hosted separately from the GIS
+          analysis engine. The website provides documentation and
+          access to the application; the EarthLungs GIS Application
+          performs the spatial analysis using approved EarthLungs
+          country site assets.
         </p>
 
         <p>
-          Sentinel-2 analysis uses the
-          <code>COPERNICUS/S2_SR_HARMONIZED</code>
-          collection.
+          Sentinel-2 vegetation-index analysis uses
+          <code>COPERNICUS/S2_SR_HARMONIZED</code>.
         </p>
 
         <p>
@@ -211,30 +214,23 @@
           <code>GOOGLE/DYNAMICWORLD/V1</code>.
         </p>
 
-
         <h2>Platform Architecture</h2>
 
         <div class="note-box">
-
           <strong>Website / Presentation</strong>
-
           <p>
-            Provides the public information, documentation and
-            access to the GIS application.
+            Provides public information, documentation and access
+            to the GIS application.
           </p>
 
           <strong>GIS Analysis</strong>
-
           <p>
             The EarthLungs GIS Application performs the selected
             spatial analysis for the selected EarthLungs site.
           </p>
-
         </div>
 
-
         <h2>Mission</h2>
-
         <p>
           To restore and protect ecosystems, fostering biodiversity
           and sustainable livelihoods through community-driven
@@ -242,33 +238,25 @@
           healthier planet for present and future generations.
         </p>
 
-
         <h2>Vision</h2>
-
         <p>
           To be a leader in transforming Africa into a green,
           sustainable, and climate-resilient continent.
         </p>
 
-
         <h2>Production Status</h2>
 
         <div class="note-box">
-
           <strong>EarthLungs GIS v1.0.0</strong>
-
           <p>
             Production baseline covering Kenya, Tanzania and
             Mozambique with seven published analysis modules:
             NDVI, NDRE, NDVI + NDRE Comparison, Temporal Change,
             LULC, EVI and NDWI.
           </p>
-
         </div>
 
-
         <h2>Future Development</h2>
-
         <p>
           Phase 8 — Restoration Suitability is deferred from the
           current production baseline and will be developed as a
@@ -276,19 +264,15 @@
         </p>
 
       </div>
-
     </section>
 
   </main>
 
-
   <footer class="site-footer">
-
     <div class="container footer-wrap">
 
       <div>
         <strong>EarthLungs Reforestation Foundation</strong>
-
         <span>
           EarthLungs GIS • Spatial intelligence for restoration monitoring.
         </span>
@@ -300,8 +284,11 @@
       </div>
 
     </div>
-
   </footer>
 
 </body>
 </html>
+"""
+
+out.write_text(html, encoding="utf-8")
+print(f"Created: {out}")
