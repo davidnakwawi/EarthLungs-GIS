@@ -1,7 +1,4 @@
-from pathlib import Path
-
-css_path = Path("/mnt/data/style.css")
-css = r""":root {
+:root {
   --earth-green: #349E40;
   --earth-blue: #33B9DD;
 
@@ -78,10 +75,11 @@ a { color: inherit; }
 }
 
 .brand-name {
+  font-size: 19px;
   font-weight: 800;
   letter-spacing: -.02em;
   white-space: nowrap;
-  color: var(--earth-green);
+  color: #349E40;
 }
 
 .nav {
@@ -693,7 +691,7 @@ a { color: inherit; }
   }
 
   .brand-name {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .nav {
@@ -753,6 +751,3 @@ a { color: inherit; }
     margin-left: 0;
   }
 }
-"""
-css_path.write_text(css, encoding="utf-8")
-print(f"Created clean CSS: {css_path}")
