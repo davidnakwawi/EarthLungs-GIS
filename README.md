@@ -2,66 +2,107 @@
 
 ## EarthLungs Spatial Intelligence Platform
 
-GIS • Remote Sensing • Drone Mapping • Restoration Intelligence
+**GIS • Remote Sensing • Drone Mapping • Restoration Intelligence**
 
 EarthLungs GIS is the spatial intelligence platform for viewing EarthLungs site boundaries and running repeatable remote sensing analyses across active EarthLungs sites.
 
+---
+
+## EarthLungs Brand
+
+The platform follows the official EarthLungs visual identity represented by the EarthLungs logo.
+
+| Brand colour | Hex |
+|---|---|
+| 🟢 EarthLungs Green | `#349E40` |
+| 🔵 EarthLungs Blue | `#33B9DD` |
+| 🟢 Light Green | `#EAF5EC` |
+| 🔵 Light Blue | `#EAF8FC` |
+
+**Primary identity:** EarthLungs Green + EarthLungs Blue
+
+The green represents the restoration and environmental side of the EarthLungs identity, while the blue complements the spatial, environmental and Earth-observation side of the platform.
+
+---
+
 ## Current Coverage
 
-- Kenya
-- Tanzania
-- Mozambique
+The current production platform is connected to:
 
-The platform uses approved EarthLungs country site assets and performs analysis for the selected site.
+- 🇰🇪 Kenya
+- 🇹🇿 Tanzania
+- 🇲🇿 Mozambique
 
-## Production GIS Application
+The platform uses approved EarthLungs country site assets and performs analysis for the selected EarthLungs site.
 
-**EarthLungs GIS Application**
+---
+
+## Live GIS Application
+
+### EarthLungs GIS Application
 
 https://ee-nakwawi.projects.earthengine.app/view/earthlungs-gis
+
+---
 
 ## Website
 
 https://davidnakwawi.github.io/EarthLungs-GIS/
 
+---
+
 ## Analysis Modules
 
-### 1. NDVI
+The current production application contains seven analysis modules.
 
-Normalized Difference Vegetation Index for vegetation condition monitoring.
+### 01 — NDVI
 
-### 2. NDRE
+**Normalized Difference Vegetation Index**
 
-Normalized Difference Red Edge for vegetation response using Sentinel-2 red-edge information.
+Used for vegetation condition monitoring.
 
-### 3. NDVI + NDRE Comparison
+### 02 — NDRE
 
-Comparison of NDVI and NDRE for the selected site across analysis periods.
+**Normalized Difference Red Edge**
 
-### 4. Temporal Change
+Used to assess vegetation response using Sentinel-2 red-edge information.
+
+### 03 — NDVI + NDRE Comparison
+
+Comparison of NDVI and NDRE for the selected EarthLungs site across analysis periods.
+
+### 04 — Temporal Change
 
 Baseline versus current temporal change analysis for NDVI and NDRE.
 
-### 5. LULC
+### 05 — LULC
 
-Land-use and land-cover analysis using Google Dynamic World V1 with confidence screening.
+**Land Use / Land Cover**
 
-### 6. EVI
+Land-cover analysis using Google Dynamic World V1 with confidence screening.
 
-Enhanced Vegetation Index for vegetation response.
+### 06 — EVI
 
-### 7. NDWI
+**Enhanced Vegetation Index**
 
-Normalized Difference Water Index for water and moisture-related surface response.
+Used for vegetation response assessment.
 
-These seven modules are the current locked production analysis scope. 
+### 07 — NDWI
+
+**Normalized Difference Water Index**
+
+Used for water and moisture-related surface response.
+
+These seven modules form the current locked production analysis scope.
+
+---
 
 ## Standard Workflow
 
 ```text
 Country
    ↓
-Site
+EarthLungs Site
    ↓
 Analysis
    ↓
