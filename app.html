@@ -3,70 +3,382 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="EarthLungs GIS Application — live spatial analysis environment.">
-  <title>GIS Application | EarthLungs GIS</title>
+
+  <title>GIS Platform | EarthLungs GIS</title>
+
+  <meta name="description"
+        content="Open the live EarthLungs GIS spatial intelligence platform.">
+
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="app-page">
+
+<body>
+
+  <!-- HEADER -->
+
   <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">
-        <img src="assets/earthlungs-logo.png" alt="EarthLungs Reforestation Foundation logo" class="brand-logo">
-        <span class="brand-name">EarthLungs GIS</span>
+    <div class="container header-inner">
+
+      <a href="index.html" class="brand">
+        <span class="brand-mark">🌍</span>
+
+        <span class="brand-text">
+          <span class="brand-name">EARTHLUNGS</span>
+          <span class="brand-subtitle">GIS</span>
+        </span>
       </a>
-      <nav class="nav" aria-label="Main navigation">
+
+      <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a class="active" href="app.html">GIS Application</a>
+        <a href="app.html" class="active">GIS Platform</a>
       </nav>
+
     </div>
   </header>
 
+
+  <!-- PAGE -->
+
   <main>
-    <section class="app-heading">
-      <div class="container app-heading-wrap">
-        <div>
-          <p class="eyebrow">LIVE EARTHLUNGS GIS APPLICATION</p>
-          <h1>EarthLungs GIS Application</h1>
-          <p>Select a country, site, analysis and exact dates in the live EarthLungs GIS application.</p>
+
+    <section class="page-hero app-hero">
+
+      <div class="container">
+
+        <div class="eyebrow">
+          EARTHLUNGS GIS PLATFORM
         </div>
-        <a class="button button-primary" href="https://ee-nakwawi.projects.earthengine.app/view/earthlungs-gis" target="_blank" rel="noopener">Open in New Tab ↗</a>
+
+        <h1>
+          Explore the
+          <span>spatial intelligence system</span>
+        </h1>
+
+        <p>
+          Access the live EarthLungs GIS application for
+          site selection, environmental analysis, restoration
+          intelligence and drone-based spatial information.
+        </p>
+
       </div>
+
     </section>
 
-    <section class="app-frame-section">
+
+    <!-- MODULES -->
+
+    <section class="section section-light">
+
       <div class="container">
-        <div class="app-frame-shell">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            GIS MODULES
+          </div>
+
+          <h2>
+            EarthLungs Intelligence Framework
+          </h2>
+
+          <p>
+            The live application is organized around eight
+            connected spatial intelligence modules.
+          </p>
+
+        </div>
+
+
+        <div class="module-pill-grid">
+
+          <div class="module-pill">
+            <span>01</span>
+            <strong>ATLAS</strong>
+            <small>Sites &amp; Boundaries</small>
+          </div>
+
+          <div class="module-pill">
+            <span>02</span>
+            <strong>CANOPY</strong>
+            <small>Vegetation</small>
+          </div>
+
+          <div class="module-pill">
+            <span>03</span>
+            <strong>TERRA</strong>
+            <small>Land &amp; Water</small>
+          </div>
+
+          <div class="module-pill">
+            <span>04</span>
+            <strong>RELIEF</strong>
+            <small>Terrain</small>
+          </div>
+
+          <div class="module-pill">
+            <span>05</span>
+            <strong>HYDRA</strong>
+            <small>Hydrology</small>
+          </div>
+
+          <div class="module-pill">
+            <span>06</span>
+            <strong>COAST</strong>
+            <small>Coastal &amp; Mangrove</small>
+          </div>
+
+          <div class="module-pill">
+            <span>07</span>
+            <strong>RESTORE</strong>
+            <small>Restoration</small>
+          </div>
+
+          <div class="module-pill">
+            <span>08</span>
+            <strong>AERIAL</strong>
+            <small>Drone Intelligence</small>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- LIVE APPLICATION -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="live-app-header">
+
+          <div>
+
+            <div class="eyebrow">
+              LIVE APPLICATION
+            </div>
+
+            <h2>
+              EarthLungs GIS
+            </h2>
+
+            <p>
+              The application below is the live Google Earth Engine
+              spatial intelligence environment.
+            </p>
+
+          </div>
+
+          <a
+            href="https://ee-nakwawi.projects.earthengine.app/view/earthlungs-gis"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary">
+            Open Full Application ↗
+          </a>
+
+        </div>
+
+
+        <div class="app-frame">
+
           <iframe
             src="https://ee-nakwawi.projects.earthengine.app/view/earthlungs-gis"
             title="EarthLungs GIS Application"
-            loading="eager"
-            allow="fullscreen"
-          ></iframe>
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+
         </div>
-        <div class="app-help">
-          <h2>How to Use</h2>
-          <div class="mini-steps">
-            <div><strong>1</strong><span>Select Country</span></div>
-            <div><strong>2</strong><span>Select Site</span></div>
-            <div><strong>3</strong><span>Select Analysis</span></div>
-            <div><strong>4</strong><span>Select Exact Dates</span></div>
-            <div><strong>5</strong><span>Run Analysis</span></div>
-          </div>
-        </div>
-        <p class="iframe-note">
-          The spatial analysis is provided by Google Earth Engine. Use <strong>Open in New Tab</strong>
-          when the embedded view is restricted by the browser.
-        </p>
+
       </div>
+
     </section>
+
+
+    <!-- WORKFLOW -->
+
+    <section class="section section-light">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            STANDARD WORKFLOW
+          </div>
+
+          <h2>
+            How the platform is used
+          </h2>
+
+        </div>
+
+
+        <div class="workflow-horizontal">
+
+          <div class="workflow-box">
+            <span>01</span>
+            <h3>Select</h3>
+            <p>
+              Select a country and physical restoration site.
+            </p>
+          </div>
+
+          <div class="workflow-arrow">→</div>
+
+          <div class="workflow-box">
+            <span>02</span>
+            <h3>Analyse</h3>
+            <p>
+              Select the required spatial intelligence analysis.
+            </p>
+          </div>
+
+          <div class="workflow-arrow">→</div>
+
+          <div class="workflow-box">
+            <span>03</span>
+            <h3>Run</h3>
+            <p>
+              Run the selected analysis using the configured
+              environmental datasets.
+            </p>
+          </div>
+
+          <div class="workflow-arrow">→</div>
+
+          <div class="workflow-box">
+            <span>04</span>
+            <h3>Interpret</h3>
+            <p>
+              Use the map, statistics and legend to understand
+              the result.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PLATFORM NOTE -->
+
+    <section class="section section-dark">
+
+      <div class="container platform-note">
+
+        <div>
+
+          <div class="eyebrow">
+            EARTHLUNGS GIS
+          </div>
+
+          <h2>
+            Built for restoration intelligence
+          </h2>
+
+          <p>
+            EarthLungs GIS connects site boundaries,
+            remote sensing, terrain, hydrology, coastal
+            intelligence, restoration modelling and
+            high-resolution drone information within one
+            structured spatial framework.
+          </p>
+
+        </div>
+
+
+        <div class="platform-note-stats">
+
+          <div>
+            <strong>88</strong>
+            <span>Source records</span>
+          </div>
+
+          <div>
+            <strong>86</strong>
+            <span>Physical sites</span>
+          </div>
+
+          <div>
+            <strong>8</strong>
+            <span>GIS modules</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- BACK -->
+
+    <section class="section platform-section">
+
+      <div class="container platform-card">
+
+        <div>
+
+          <div class="eyebrow">
+            EARTHLUNGS GIS
+          </div>
+
+          <h2>
+            Explore the platform architecture
+          </h2>
+
+          <p>
+            Learn more about the eight intelligence modules
+            and the analytical capabilities behind the platform.
+          </p>
+
+        </div>
+
+        <a href="about.html" class="btn btn-primary">
+          About EarthLungs GIS →
+        </a>
+
+      </div>
+
+    </section>
+
   </main>
 
+
+  <!-- FOOTER -->
+
   <footer class="site-footer">
-    <div class="container footer-wrap">
-      <div><strong>EarthLungs Reforestation Foundation</strong><span>EarthLungs GIS • Spatial intelligence for restoration monitoring.</span></div>
-      <div><a href="index.html">Home</a><a href="about.html">About</a></div>
+
+    <div class="container footer-inner">
+
+      <div>
+        <strong>EARTHLUNGS GIS</strong>
+
+        <p>
+          Spatial intelligence for ecological restoration.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="app.html">GIS Platform</a>
+      </div>
+
     </div>
+
+    <div class="container footer-bottom">
+      © 2026 EarthLungs Reforestation Foundation
+    </div>
+
   </footer>
+
 </body>
 </html>
