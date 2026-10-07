@@ -1,294 +1,634 @@
-from pathlib import Path
-
-out = Path("/mnt/data/EarthLungs-GIS-about-clean.html")
-
-html = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About the EarthLungs Spatial Intelligence Platform.">
+
   <title>About | EarthLungs GIS</title>
+
+  <meta name="description"
+        content="About the EarthLungs GIS spatial intelligence platform.">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header class="site-header">
-    <div class="container nav-wrap">
+  <!-- HEADER -->
 
-      <a class="brand" href="index.html">
-        <img
-          src="assets/earthlungs-logo.png"
-          alt="EarthLungs Reforestation Foundation logo"
-          class="brand-logo"
-        >
-        <span class="brand-name">EarthLungs GIS</span>
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="brand">
+        <span class="brand-mark">🌍</span>
+
+        <span class="brand-text">
+          <span class="brand-name">EARTHLUNGS</span>
+          <span class="brand-subtitle">GIS</span>
+        </span>
       </a>
 
-      <nav class="nav" aria-label="Main navigation">
+      <nav class="main-nav">
         <a href="index.html">Home</a>
-        <a class="active" href="about.html">About</a>
-        <a href="app.html">GIS Application</a>
+        <a href="about.html" class="active">About</a>
+        <a href="app.html">GIS Platform</a>
       </nav>
 
     </div>
   </header>
 
+
+  <!-- PAGE HERO -->
+
   <main>
 
     <section class="page-hero">
-      <div class="container narrow">
-        <p class="eyebrow">ABOUT EARTHLUNGS GIS</p>
-        <h1>EarthLungs Spatial Intelligence Platform</h1>
+      <div class="container">
+
+        <div class="eyebrow">
+          ABOUT EARTHLUNGS GIS
+        </div>
+
+        <h1>
+          Spatial intelligence for
+          <span>ecological restoration</span>
+        </h1>
+
         <p>
-          GIS, remote sensing and drone mapping supporting EarthLungs
-          restoration sites across Africa.
+          EarthLungs GIS is a modular spatial intelligence platform
+          designed to organize, analyse and communicate environmental
+          information supporting restoration across Africa.
         </p>
+
       </div>
     </section>
 
+
+    <!-- PURPOSE -->
+
     <section class="section section-light">
-      <div class="container narrow content-copy">
+      <div class="container two-column">
 
-        <h2>Purpose</h2>
-        <p>
-          EarthLungs GIS provides a structured spatial environment for
-          viewing approved EarthLungs site boundaries and running
-          repeatable remote sensing analyses for selected sites.
-        </p>
+        <div>
+          <div class="eyebrow">OUR PURPOSE</div>
 
-        <h2>Current Coverage</h2>
-        <p>The current production platform is connected to EarthLungs sites in:</p>
-        <ul>
-          <li>Kenya</li>
-          <li>Tanzania</li>
-          <li>Mozambique</li>
-        </ul>
-
-        <h2>How the Platform Works</h2>
-
-        <div class="workflow">
-          <div>
-            <span>01</span>
-            <strong>Country</strong>
-            <small>Select Kenya, Tanzania or Mozambique.</small>
-          </div>
-          <div>
-            <span>02</span>
-            <strong>EarthLungs Site</strong>
-            <small>Select the approved site boundary.</small>
-          </div>
-          <div>
-            <span>03</span>
-            <strong>Analysis</strong>
-            <small>Select the required spatial analysis.</small>
-          </div>
-          <div>
-            <span>04</span>
-            <strong>Date</strong>
-            <small>Select the exact analysis dates.</small>
-          </div>
-          <div>
-            <span>05</span>
-            <strong>Run</strong>
-            <small>Generate the selected analysis.</small>
-          </div>
+          <h2>
+            Turning environmental data into useful decisions
+          </h2>
         </div>
 
-        <h2>Current Analysis Scope</h2>
+        <div>
 
-        <h3>NDVI</h3>
-        <p>
-          Normalized Difference Vegetation Index for vegetation
-          condition monitoring.
-        </p>
-
-        <h3>NDRE</h3>
-        <p>
-          Normalized Difference Red Edge for vegetation response
-          using Sentinel-2 red-edge information.
-        </p>
-
-        <h3>NDVI + NDRE Comparison</h3>
-        <p>
-          Comparison of NDVI and NDRE for the selected EarthLungs
-          site across analysis periods.
-        </p>
-
-        <h3>Temporal Change</h3>
-        <p>
-          Baseline versus current temporal change analysis for
-          NDVI and NDRE.
-        </p>
-
-        <h3>LULC</h3>
-        <p>
-          Land-use and land-cover analysis using Google Dynamic
-          World V1 with confidence screening.
-        </p>
-
-        <h3>EVI</h3>
-        <p>
-          Enhanced Vegetation Index for vegetation response.
-        </p>
-
-        <h3>NDWI</h3>
-        <p>
-          Normalized Difference Water Index for water and
-          moisture-related surface response.
-        </p>
-
-        <h2>Interpreting Results</h2>
-
-        <div class="interpret-grid">
-          <div>
-            <h3>NDVI</h3>
-            <p>
-              Higher values generally indicate greener, denser
-              vegetation. Use temporal change analysis to compare
-              the same site across periods.
-            </p>
-          </div>
-
-          <div>
-            <h3>NDRE</h3>
-            <p>
-              Provides a red-edge vegetation signal and supports
-              assessment of vegetation response where canopy
-              condition varies.
-            </p>
-          </div>
-
-          <div>
-            <h3>EVI</h3>
-            <p>
-              Provides an enhanced vegetation response using
-              near-infrared, red and blue bands.
-            </p>
-          </div>
-
-          <div>
-            <h3>NDWI</h3>
-            <p>
-              Provides a water and vegetation-moisture signal
-              derived from green and near-infrared bands.
-            </p>
-          </div>
-
-          <div>
-            <h3>LULC</h3>
-            <p>
-              Dynamic World classes are screened using the
-              production confidence threshold before class-area
-              statistics and change mapping are reported.
-            </p>
-          </div>
-
-          <div>
-            <h3>Temporal Change</h3>
-            <p>
-              Compares baseline and current periods for NDVI and
-              NDRE using absolute and percentage change.
-            </p>
-          </div>
-        </div>
-
-        <h2>Technology</h2>
-
-        <p>
-          The presentation website is hosted separately from the GIS
-          analysis engine. The website provides documentation and
-          access to the application; the EarthLungs GIS Application
-          performs the spatial analysis using approved EarthLungs
-          country site assets.
-        </p>
-
-        <p>
-          Sentinel-2 vegetation-index analysis uses
-          <code>COPERNICUS/S2_SR_HARMONIZED</code>.
-        </p>
-
-        <p>
-          Land-cover analysis uses
-          <code>GOOGLE/DYNAMICWORLD/V1</code>.
-        </p>
-
-        <h2>Platform Architecture</h2>
-
-        <div class="note-box">
-          <strong>Website / Presentation</strong>
           <p>
-            Provides public information, documentation and access
-            to the GIS application.
+            Restoration landscapes generate large amounts of
+            spatial information. Site boundaries, satellite
+            imagery, terrain, hydrology, vegetation, coastal
+            conditions and drone surveys all provide different
+            pieces of evidence.
           </p>
 
-          <strong>GIS Analysis</strong>
           <p>
-            The EarthLungs GIS Application performs the selected
-            spatial analysis for the selected EarthLungs site.
+            EarthLungs GIS brings these datasets together into
+            a structured analytical framework so that spatial
+            information can support restoration planning,
+            monitoring and decision-making.
           </p>
-        </div>
 
-        <h2>Mission</h2>
-        <p>
-          To restore and protect ecosystems, fostering biodiversity
-          and sustainable livelihoods through community-driven
-          restoration and conservation efforts, ensuring a greener,
-          healthier planet for present and future generations.
-        </p>
-
-        <h2>Vision</h2>
-        <p>
-          To be a leader in transforming Africa into a green,
-          sustainable, and climate-resilient continent.
-        </p>
-
-        <h2>Production Status</h2>
-
-        <div class="note-box">
-          <strong>EarthLungs GIS v1.0.0</strong>
           <p>
-            Production baseline covering Kenya, Tanzania and
-            Mozambique with seven published analysis modules:
-            NDVI, NDRE, NDVI + NDRE Comparison, Temporal Change,
-            LULC, EVI and NDWI.
+            The platform is designed around real restoration
+            sites rather than maps alone.
           </p>
-        </div>
 
-        <h2>Future Development</h2>
-        <p>
-          Phase 8 — Restoration Suitability is deferred from the
-          current production baseline and will be developed as a
-          separate phase after further review and validation.
-        </p>
+        </div>
 
       </div>
+    </section>
+
+
+    <!-- ARCHITECTURE -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            PLATFORM ARCHITECTURE
+          </div>
+
+          <h2>
+            Eight connected GIS modules
+          </h2>
+
+          <p>
+            EarthLungs GIS is organized into eight specialist
+            intelligence modules. Each module has a defined
+            analytical role while remaining part of the wider
+            restoration information system.
+          </p>
+
+        </div>
+
+
+        <div class="about-module-list">
+
+          <article class="about-module">
+
+            <div class="about-module-number">01</div>
+
+            <div>
+              <h3>ATLAS</h3>
+              <h4>Site &amp; Boundary Intelligence</h4>
+
+              <p>
+                Establishes the spatial foundation of the
+                platform through site boundaries, country
+                organization, physical site grouping and
+                site selection.
+              </p>
+            </div>
+
+          </article>
+
+
+          <article class="about-module">
+
+            <div class="about-module-number">02</div>
+
+            <div>
+              <h3>CANOPY</h3>
+              <h4>Vegetation Intelligence</h4>
+
+              <p>
+                Provides vegetation analysis using NDVI,
+                NDRE, EVI, NDVI and NDRE comparisons and
+                vegetation change analysis.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="about-module">
+
+            <div class="about-module-number">03</div>
+
+            <div>
+              <h3>TERRA</h3>
+              <h4>Land &amp; Water Intelligence</h4>
+
+              <p>
+                Provides land-cover and water intelligence
+                including LULC, NDWI, land-cover change and
+                NDWI change analysis.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="about-module">
+
+            <div class="about-module-number">04</div>
+
+            <div>
+              <h3>RELIEF</h3>
+              <h4>Terrain Intelligence</h4>
+
+              <p>
+                Analyses elevation and terrain conditions
+                through elevation, slope, aspect, hillshade,
+                contours and terrain statistics.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="about-module">
+
+            <div class="about-module-number">05</div>
+
+            <div>
+              <h3>HYDRA</h3>
+              <h4>Hydrology Intelligence</h4>
+
+              <p>
+                Examines water movement and hydrological
+                conditions including drainage, wetness,
+                water connectivity and hydrological
+                restoration suitability.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="about-module">
+
+            <div class="about-module-number">06</div>
+
+            <div>
+              <h3>COAST</h3>
+              <h4>Coastal &amp; Mangrove Intelligence</h4>
+
+              <p>
+                Supports coastal restoration analysis through
+                mangrove extent, mangrove change, shoreline
+                and water extent change, inundation,
+                intertidal exposure and water connectivity.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="about-module">
+
+            <div class="about-module-number">07</div>
+
+            <div>
+              <h3>RESTORE</h3>
+              <h4>Restoration Intelligence</h4>
+
+              <p>
+                Combines environmental factors to support
+                restoration suitability, plantable area,
+                trenchable area, restoration change and
+                restoration monitoring.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="about-module">
+
+            <div class="about-module-number">08</div>
+
+            <div>
+              <h3>AERIAL</h3>
+              <h4>Drone Intelligence</h4>
+
+              <p>
+                Brings high-resolution UAV information into
+                the platform, including orthomosaics,
+                multispectral vegetation indices, terrain
+                products and drone-to-satellite comparison.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- LEGACY ANALYSES -->
+
+    <section class="section section-light">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            ANALYTICAL CAPABILITIES
+          </div>
+
+          <h2>
+            Existing analyses remain part of the system
+          </h2>
+
+          <p>
+            Earlier EarthLungs GIS analyses have not been removed.
+            They have been organized under the new eight-module
+            architecture.
+          </p>
+
+        </div>
+
+
+        <div class="analysis-grid">
+
+          <div class="analysis-card">
+            <strong>NDVI</strong>
+            <span>CANOPY</span>
+          </div>
+
+          <div class="analysis-card">
+            <strong>NDRE</strong>
+            <span>CANOPY</span>
+          </div>
+
+          <div class="analysis-card">
+            <strong>EVI</strong>
+            <span>CANOPY</span>
+          </div>
+
+          <div class="analysis-card">
+            <strong>NDVI + NDRE</strong>
+            <span>CANOPY</span>
+          </div>
+
+          <div class="analysis-card">
+            <strong>Vegetation Change</strong>
+            <span>CANOPY</span>
+          </div>
+
+          <div class="analysis-card">
+            <strong>LULC</strong>
+            <span>TERRA</span>
+          </div>
+
+          <div class="analysis-card">
+            <strong>Land-Cover Change</strong>
+            <span>TERRA</span>
+          </div>
+
+          <div class="analysis-card">
+            <strong>NDWI</strong>
+            <span>TERRA</span>
+          </div>
+
+          <div class="analysis-card">
+            <strong>NDWI Change</strong>
+            <span>TERRA</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- DATA STRUCTURE -->
+
+    <section class="section section-dark">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            SITE STRUCTURE
+          </div>
+
+          <h2>
+            A consistent regional spatial foundation
+          </h2>
+
+          <p>
+            EarthLungs GIS currently organizes 88 source records
+            into 86 physical and selectable sites.
+          </p>
+
+        </div>
+
+
+        <div class="data-stat-grid">
+
+          <div class="data-stat">
+            <strong>88</strong>
+            <span>Source records</span>
+          </div>
+
+          <div class="data-stat">
+            <strong>86</strong>
+            <span>Physical/selectable sites</span>
+          </div>
+
+          <div class="data-stat">
+            <strong>3</strong>
+            <span>Countries</span>
+          </div>
+
+          <div class="data-stat">
+            <strong>8</strong>
+            <span>GIS modules</span>
+          </div>
+
+        </div>
+
+
+        <div class="structure-note">
+
+          <p>
+            Chara Expansion records are represented as one
+            physical site and Mwakirunge records are represented
+            as one physical site, while other source records
+            remain individually selectable according to the
+            approved site structure.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- WORKFLOW -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            STANDARD WORKFLOW
+          </div>
+
+          <h2>
+            From field information to spatial intelligence
+          </h2>
+
+        </div>
+
+
+        <div class="workflow-horizontal">
+
+          <div class="workflow-box">
+            <span>01</span>
+            <h3>Data</h3>
+            <p>
+              Field, GIS, satellite and drone data.
+            </p>
+          </div>
+
+          <div class="workflow-arrow">→</div>
+
+          <div class="workflow-box">
+            <span>02</span>
+            <h3>Structure</h3>
+            <p>
+              Standardized sites and spatial datasets.
+            </p>
+          </div>
+
+          <div class="workflow-arrow">→</div>
+
+          <div class="workflow-box">
+            <span>03</span>
+            <h3>Analysis</h3>
+            <p>
+              Environmental and restoration intelligence.
+            </p>
+          </div>
+
+          <div class="workflow-arrow">→</div>
+
+          <div class="workflow-box">
+            <span>04</span>
+            <h3>Monitoring</h3>
+            <p>
+              Spatial change through time.
+            </p>
+          </div>
+
+          <div class="workflow-arrow">→</div>
+
+          <div class="workflow-box">
+            <span>05</span>
+            <h3>Decision</h3>
+            <p>
+              Evidence for restoration action.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- TECHNOLOGY -->
+
+    <section class="section section-light">
+      <div class="container two-column">
+
+        <div>
+
+          <div class="eyebrow">
+            TECHNOLOGY
+          </div>
+
+          <h2>
+            Built with modern geospatial technologies
+          </h2>
+
+        </div>
+
+        <div class="technology-list">
+
+          <div>
+            <strong>Google Earth Engine</strong>
+            <span>
+              Satellite and environmental analysis
+            </span>
+          </div>
+
+          <div>
+            <strong>GIS</strong>
+            <span>
+              Spatial data management and analysis
+            </span>
+          </div>
+
+          <div>
+            <strong>Remote Sensing</strong>
+            <span>
+              Earth observation and vegetation intelligence
+            </span>
+          </div>
+
+          <div>
+            <strong>UAV / Drone Mapping</strong>
+            <span>
+              High-resolution site-scale intelligence
+            </span>
+          </div>
+
+          <div>
+            <strong>Web GIS</strong>
+            <span>
+              Accessible spatial information and visualization
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="section platform-section">
+
+      <div class="container platform-card">
+
+        <div>
+
+          <div class="eyebrow">
+            EARTHLUNGS GIS
+          </div>
+
+          <h2>
+            Explore the spatial intelligence platform
+          </h2>
+
+          <p>
+            Open the live EarthLungs GIS application to
+            explore the site network and analytical modules.
+          </p>
+
+        </div>
+
+        <a href="app.html" class="btn btn-primary">
+          Open GIS Platform →
+        </a>
+
+      </div>
+
     </section>
 
   </main>
 
+
+  <!-- FOOTER -->
+
   <footer class="site-footer">
-    <div class="container footer-wrap">
+
+    <div class="container footer-inner">
 
       <div>
-        <strong>EarthLungs Reforestation Foundation</strong>
-        <span>
-          EarthLungs GIS • Spatial intelligence for restoration monitoring.
-        </span>
+        <strong>EARTHLUNGS GIS</strong>
+
+        <p>
+          Spatial intelligence for ecological restoration.
+        </p>
       </div>
 
-      <div>
+      <div class="footer-links">
         <a href="index.html">Home</a>
-        <a href="app.html">GIS Application</a>
+        <a href="about.html">About</a>
+        <a href="app.html">GIS Platform</a>
       </div>
 
     </div>
+
+    <div class="container footer-bottom">
+      © 2026 EarthLungs Reforestation Foundation
+    </div>
+
   </footer>
 
 </body>
 </html>
-"""
-
-out.write_text(html, encoding="utf-8")
-print(f"Created: {out}")
