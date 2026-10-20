@@ -1,8 +1,8 @@
-# EarthLungs GIS
+# Telluverd
 
 ## Spatial Intelligence for Ecological Restoration
 
-EarthLungs GIS is a modular spatial intelligence platform designed to organize, analyse and communicate environmental information supporting ecological restoration across Africa.
+Telluverd is a modular spatial intelligence platform designed to organize, analyse and communicate environmental information supporting ecological restoration across Africa.
 
 The platform brings together:
 
@@ -19,7 +19,7 @@ The platform brings together:
 
 ---
 
-# EarthLungs GIS Architecture
+# Telluverd Architecture
 
 The platform is organized into **eight connected GIS intelligence modules**.
 
